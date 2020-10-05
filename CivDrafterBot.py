@@ -2,6 +2,7 @@ import os
 import discord
 import random
 import copy
+import psycopg2
 from dotenv import load_dotenv
 
 # 45 civs
@@ -11,13 +12,16 @@ civList = [
     "Australia (John)",
     "Aztec (Montezuma)",
     "Brazil (Pedro)",
+    "Byzantium (Basil II)",
     "Canada (Wilfrid)",
     "China (Qin)",
     "Cree (Poundmaker)",
     "Netherlands (Wilhelmina)",
     "Egypt (Cleopatra)",
     "England (Victoria or Eleanor)",
+    "Ethiopia (Menelik II)",
     "France (Catherine or Eleanor)",
+    "Gaul (Ambiorix)",
     "Georgia (Tamar)",
     "Germany (Frederick)",
     "Gran Colombia (Simon)",
@@ -73,6 +77,8 @@ def draft_civ(taken):
 
 # Connect to the Discord API
 client = discord.Client()
+
+#conn = psycopg2.connect(os.getenv("DB_CONNECTION"))
 
 # Listen for the event of a message being sent in a connected Discord server (guild).
 @client.event
