@@ -78,6 +78,7 @@ def draft_civ(taken):
 # Connect to the Discord API
 client = discord.Client()
 
+# TODO: User Preferences
 #conn = psycopg2.connect(os.getenv("DB_CONNECTION"))
 
 # Listen for the event of a message being sent in a connected Discord server (guild).
